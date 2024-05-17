@@ -1,3 +1,38 @@
-= Section 1
+= Terminology Comparison
 
-This is _Section 1_ of _Chapter 1_ in the *hello* quick course....
+[cols="1,1,1"]
+|===
+| Feature | OpenShift Virtualization | vSphere
+
+| Where VM disks are stored
+| https://docs.openshift.com/container-platform/latest/virt/storage/virt-storage-config-overview.html#storage-configuration-tasks[PVC / PV]
+| Datastore
+
+| Policy based storage
+| https://docs.openshift.com/container-platform/latest/virt/storage/virt-configuring-storage-profile.html[StorageClass]
+| Storage Policy Based Management (SPBM)
+
+| Non-disruptive VM migration
+| https://docs.openshift.com/container-platform/latest/virt/live_migration/virt-about-live-migration.html[Live migration]
+| vMotion
+
+| Non-disruptive VM storage migration
+| N/A
+| Storage vMotion
+
+| Active resource balancing
+| https://docs.openshift.com/container-platform/latest/rest_api/policy_apis/eviction-policy-v1.html[Pod eviction policy], https://docs.openshift.com/container-platform/latest/nodes/scheduling/descheduler/index.html[descheduler]
+| Dynamic Resource Scheduling (DRS)
+
+| Physical network configuration
+| https://docs.openshift.com/container-platform/latest/virt/post_installation_configuration/virt-post-install-network-config.html[NMstate Operator], https://docs.openshift.com/container-platform/latest/virt/vm_networking/virt-networking-overview.html[Multus]
+| vSwitch / DvSwitch
+
+| Overlay network configuration
+| https://docs.openshift.com/container-platform/latest/networking/ovn_kubernetes_network_provider/ovn-kubernetes-architecture-assembly.html[OVN-Kubernetes], https://access.redhat.com/articles/5436171[CNI partners], Multus
+| NSX-T
+
+| Host / VM metrics
+| https://docs.openshift.com/container-platform/latest/monitoring/managing-metrics.html[OpenShift Metrics] and https://docs.openshift.com/container-platform/latest/monitoring/monitoring-overview.html[Monitoring]
+| vCenter, vRealize Operations
+|===

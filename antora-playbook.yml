@@ -1,6 +1,6 @@
 site:
-  title: Placeholder Course Title
-  start_page: placeholder-course-name::index.adoc
+  title: Map vSphere features to OpenShift Virtualization
+  start_page: map-vSphere-ocpvirt::index.adoc
 
 content:
   sources:

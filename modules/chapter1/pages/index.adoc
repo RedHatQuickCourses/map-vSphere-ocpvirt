@@ -1,3 +1,10 @@
-= Chapter 1
+= Workflow mapping of Red Hat OpenShift Virtualization to vSphere
 
-This is the home page of _Chapter_ 1 in the *hello* quick course...
+This chapter covers the workflow mapping of Red Hat OpenShift Virtualization to vSphere.
+
+Chapter goals:
+
+* Familiarize with terminology comparison between OpenShift Virtualization and vSphere
+* Familiarize with the virtual machine management in OpenShift Virtualization and vSphere
+* Familiarize with the virtualization environment management in OpenShift Virtualization and vSphere
+* Familiarize with connecting VMs and containers/k8s in OpenShift Virtualization and vSphere

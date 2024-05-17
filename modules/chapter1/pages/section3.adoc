@@ -1,4 +1,14 @@
-= Section 3
+= How do I manage the virtualization environment?
 
-This is _Section 3_ of _Chapter 1_ in the *hello* quick course....
+== VMware
+* Install ESXi to hypervisor nodes and configure basic network connectivity, then use vCenter to join the nodes and configure additional properties
+* Configuration can be done manually, semi-automated using DvSwitches and host profiles, and otherwise automated using traditional tools (Ansible, PowerCLI, etc.)
 
+== OpenShift Virtualization
+* Deploying OpenShift to physical servers using https://docs.openshift.com/container-platform/4.11/installing/installing_bare_metal_ipi/ipi-install-overview.html[full stack automation (IPI)], https://console.redhat.com/openshift/assisted-installer/clusters[Assisted Installer], or UPI
+* https://docs.openshift.com/container-platform/latest/virt/install/installing-virt.html#virt-installing-virt-operator_installing-virt[Install OpenShift Virtualization Operator]
+* Configure with standard OpenShift methodologies
+** https://docs.openshift.com/container-platform/latest/machine_management/index.html[Machine Config], https://docs.openshift.com/container-platform/latest/virt/post_installation_configuration/virt-post-install-network-config.html[NMstate], https://docs.openshift.com/container-platform/latest/scalability_and_performance/cnf-low-latency-tuning.html[Low Latency tuning], https://docs.openshift.com/container-platform/latest/scalability_and_performance/using-node-tuning-operator.html[Node Tuning Operator], etc.
+
+[NOTE]
+Documentation - https://docs.openshift.com/container-platform/latest/virt/getting_started/virt-getting-started.html[Getting started with OpenShift Virtualization]

@@ -1,6 +1,33 @@
-= An Example Quick Course
+= Map vSphere features to OpenShift Virtualization
 :navtitle: Home
 
-== Introduction
+Welcome to this quick course on the _Map vSphere features to OpenShift Virtualization_.
+This quick course is a part of a series of courses about Migrate Applications and VM workloads from VMware to OpenShift Virtualization.
 
-This is an example quick course demonstrating the usage of Antora for authoring and publishing quick courses.
+== Authors
+
+The PTL team acknowledges the valuable contributions of the following Red Hat associates:
+
+* Andrew Sullivan
+* Ken Savich
+* Laura Thain
+* Sarvesh Pandit
+
+== Prerequisites
+
+For this course, you should have:
+
+* RHCSA or higher is helpful for the navigation and usage of the command line, but it is not required.
+* https://developers.redhat.com/learn/openshift/container-fundamentals[Container Fundamentals]
+* https://developers.redhat.com/learn/openshift/foundations-openshift[Foundations of OpenShift]
+
+== Objectives
+
+The overall objectives of this course include:
+
+* Identify features and capabilities of Red Hat OpenShift Virtualization that are equivalent to VMware vSphere one
+* Map the features and capabilities of VMware vSphere to OpenShift Virtualization
+
+== References
+
+* https://docs.google.com/presentation/d/1-JXkZ50nODr7pBTuD7qyaCdTCLUqSD5QZYABxQhmCqg/edit#slide=id.ga63efbaffa_0_1625[OpenShift Virtualization Capabilities and Workflow mapping to VMware]

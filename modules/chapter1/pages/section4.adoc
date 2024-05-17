@@ -1,0 +1,12 @@
+= Alternate View: How do I connect VMs and containers/k8s?
+
+== VMware
+* Kubernetes is deployed in VMs to the vSphere environment
+* When using standard networking, e.g. (D)vSwitches, for VM connectivity, Pod-to-VM traffic traverses the k8s ingress/egress stack
+* When using NSX-T as the SDN, VMs and containers can be connected to the same logical network
+* Additional functionality, e.g. microsegmentation, for Pods relies on NSX-T
+
+== OpenShift Virtualization
+* OpenShift Virtualization uses the same SDN for both Pods and VMs, they are native peers.
+* VMs access the same SDN features as Pods, including network policies, Service Mesh, Service and Route abstractions, etc.
+* VMs can also connect directly to external L2 network, e.g. VLAN, or other networks defined using Multus
