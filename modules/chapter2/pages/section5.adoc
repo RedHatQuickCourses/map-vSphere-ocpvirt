@@ -1,0 +1,26 @@
+= Networking
+
+[cols="1,1,1"]
+|===
+|  | OpenShift Virtualization | VMware
+
+| Host network configuration and management
+| Kubernetes-native configuration management using the https://docs.openshift.com/container-platform/latest/networking/k8s_nmstate/k8s-nmstate-about-the-k8s-nmstate-operator.html[NMstate Operator] and https://docs.openshift.com/container-platform/latest/networking/multiple_networks/understanding-multiple-networks.html[Multus]
+| Per-host configuration via vSwitch or single point management via Distributed Virtual Switch (DvSwitch)
+
+| Software-defined networking: protect/limit/control VM-to-VM communication
+| Network policies using any SDN provide {Pod|VM}-to-{Pod|VM} traffic control. Multiple distinct SDNs are possible using the partner ecosystem, e.g. https://catalog.redhat.com/software/container-stacks/detail/5e98747f6c5dcb34dfbb1a0f[the Tigera Calico Operator].
+| Multiple capabilities here, e.g. QinQ, but this is most often referring to NSX’s microsegmentation, a.k.a. distributed firewall
+
+| Disaster Recovery - Metro (sync)
+| VMs are connected to one or more L2 (VLAN) networks using Multus and/or connected to the https://docs.openshift.com/container-platform/latest/networking/ovn_kubernetes_network_provider/about-ovn-kubernetes.html[cluster SDN]
+| VMs are connected to one or more L2 (VLAN) networks using (D)vSwitches and/or NSX
+
+| Pod-to-VM and VM-to-Pod connectivity
+| VMs and Pods are native peers https://docs.openshift.com/container-platform/latest/networking/about-networking.html[when connected to the SDN], with all of the features and capabilities equally available to both
+| Traffic between Pods and VMs must traverse through the Kubernetes ingress or similar mechanism, e.g. NodePort
+
+| Application observability
+| https://docs.openshift.com/container-platform/latest/service_mesh/v2x/ossm-about.html[Service Mesh] provides robust abilities to ingest and analyze network flows and application level data to assist with debugging, performance troubleshooting, and more for both containerized and virtualized application components in the same cluster
+| vSwitch port mirroring to third party solutions and NSX traffic analysis for security purposes, no - or little - native visibility
+|===

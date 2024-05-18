@@ -1,0 +1,19 @@
+= VM Optimization
+
+[cols="1,1,1"]
+|===
+|  | OpenShift Virtualization | VMware
+
+| High Performance VMs
+| https://docs.openshift.com/container-platform/latest/scalability_and_performance/cnf-numa-aware-scheduling.html[NUMA aware node scheduling] for best performance, huge pages for data warehousing and in-memory databases, reserve/protect resources using standard Kubernetes mechanisms
+| NUMA awareness, large/huge pages, latency sensitivity, resource reservations, SIOC, NIOC, and shares mechanism for fairness during contention
+
+| Compute Acceleration
+| https://docs.openshift.com/container-platform/latest/virt/virtual_machines/advanced_vm_management/virt-configuring-virtual-gpus.html[GPU passthrough supported], (NVIDIA) vGPU supported
+| PCI passthrough for GPUs, vGPU supported
+
+| Dynamic reconfiguration
+| Supports https://docs.openshift.com/container-platform/latest/virt/virtual_machines/virtual_disks/virt-hot-plugging-virtual-disks.html[storage], https://docs.openshift.com/container-platform/latest/virt/vm_networking/virt-connecting-vm-to-sriov.html[SR-IOV] and https://docs.openshift.com/container-platform/latest/virt/vm_networking/virt-hot-plugging-network-interfaces.html[Bridge Network] hot-plug
+CPU and memory are on the near roadmap
+| CPU, memory, disk, network adapter, and some additional hardware is supported for hot add/remove and reconfiguration
+|===

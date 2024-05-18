@@ -1,3 +1,7 @@
-= Chapter 2
+= Capability mapping of Red Hat OpenShift Virtualization to vSphere
 
-This is the home page of _Chapter 2_ in the *hello* quick course....
+This chapter covers the capability mapping of Red Hat OpenShift Virtualization to vSphere.
+
+Chapter goals:
+
+* Map the features, resources, products and services integration capabilities of OpenShift Virtualization with vSphere.

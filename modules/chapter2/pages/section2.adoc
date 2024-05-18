@@ -1,0 +1,25 @@
+= Automation
+
+[cols="1,1,1"]
+|===
+|  | OpenShift Virtualization | VMware
+
+| Declarative infrastructure (platform)
+| OpenShift supports infrastructure as code for both OpenShift-hosted workloads and OpenShift infrastructure itself.
+| Third party solutions
+
+| Declarative configuration
+| OpenShift GitOps (Argo CD) included. Governance enforcement using RHACM
+| Terraform and other ecosystem partners
+
+| CI/CD
+| Automate build and configuration of VMs with included OpenShift pipelines (Tekton)
+| Aria Automation (vRealize Automation)
+
+| Multi-cluster management
+| Red Hat ACM (includes Submariner)
+| Aria Automation & Aria Automation Orchestrator (vRealize Orchestrator)
+|===
+
+OpenShift Virtualization allows virtual machines to take full advantage of cloud-native automation tools - ArgoCD (GitOps), Tekton (pipelines), Red Hat Advanced Cluster Manager (multi-cluster management).
+OpenShift embraces the _infrastructure as code_ model, in which the OpenShift infrastructure itself (not just workloads) are managed in a declarative fashion.

@@ -1,0 +1,54 @@
+= Storage - the bigger story
+
+* OpenShift Virtualization uses Kubernetes CSI abstractions for VM storage
+** In vSphere, static pools of capacity are given to the hypervisor (datastore), each VM disk is one or more file(s).
+Each datastore holds many VM disks.
+The virtualization admin is responsible for storage capacity management.
+** OpenShift / k8s uses dynamic PV/PVC provisioning of a CSI compliant storage provider.
+Each PV holds one VM disk.
+The storage admin is responsible for storage capacity management
+* Local storage - maximize host resource utilization via HostPathProvisioner, LocalStorageOperator, TopoLVM to provide PVs to VMs, Pods, or hosted storage solutions
+* Both vSphere and OpenShift have converged hypervisor and storage offerings
+** Use OpenShift Data Foundation, or a partner offering with a CSI provider, e.g. Portworx, to host VMs in a converged storage + OpenShift deployment
+** VMware has VSAN and multiple ecosystem partners offering hyperconverged features, e.g. Nutanix
+
+== Storage - Core feature/capability matrix
+
+[cols="1,1,1"]
+|===
+|  | OpenShift Virtualization | VMware
+
+| Accessing legacy storage arrays
+| https://kubernetes-csi.github.io/docs/drivers.html[All major storage vendors have a CSI compliant driver]
+| Compatible with all major storage vendors
+
+| Storage accelerated cloning
+| Yes, depending on CSI driver
+| Yes, via VAAI
+
+| Disk resizing
+| Yes
+| Yes
+
+| Policy based storage management
+| Implicit to the platform (StorageClasses)
+| vVols, SPBM
+
+| Disk / VM snapshots
+| Yes
+| Yes
+
+| Non-disruptive storage migration
+| *[Check section below]
+| Storage vMotion
+|===
+
+*Non-disruptive storage migration
+
+* OpenShift Virtualization does not use datastores, where one storage device (LUN, NFS export, etc.) holds many VM disks. This means that the use case where the storage device is running out of GiB or IOPS and needs to have capacity “freed” does not apply with OpenShift Virtualization.
+* Different use cases.
+** **Regular storage provisioning** / capacity expansion for a VM - k8s separates VM/Pod storage consumption (i.e. the PVC) from the storage provisioning via StorageClass + CSI. Capacity management is handled through the CSI storage provide, so Storage migration in not needed.
+** ** Changing k8s storage class** (initially deploy VMs on wrong storage class), etc. - cold migration using Migration Toolkit for Containers (MTC).
+** **Storage array life cycle** - migrating to newer version of same storage vendor - use storage vendor provided tooling to non-disruptively migrate from the old array to the new one.
+** **Storage array life cycle** - Migrating from one storage vendor to different vendor - VM cold migration using Migration Toolkit for Containers.
+

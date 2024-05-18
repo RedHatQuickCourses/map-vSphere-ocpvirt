@@ -1,0 +1,26 @@
+= Monitoring, Alerts/Events, Logs
+
+[cols="1,1,1"]
+|===
+|  | OpenShift Virtualization | VMware
+
+| Notification/Alarm on Triggers
+| https://docs.openshift.com/container-platform/latest/monitoring/monitoring-overview.html#understanding-the-monitoring-stack_monitoring-overview[Prometheus and Alertmanager] provide rules definition on all cluster objects including VMs. Severity levels can be set and have discrete actions for each level.
+| Custom Alarm provides rules definition on event, condition, or state triggers. Severity levels can be set.
+
+| Variety of Notification Targets
+| https://docs.openshift.com/container-platform/latest/monitoring/managing-alerts.html#sending-notifications-to-external-systems_managing-alerts[Alertmanager] provides default handlers for email, webhook, and several 3rd party apps including Slack, PagerDuty, and MSTeams (See Notes for full list)
+| Custom Alarm provides for emails and SNMP traps configuration as well as script execution
+
+| VM Event Logging
+| https://docs.openshift.com/container-platform/latest/logging/cluster-logging.html#logging-architecture-overview_cluster-logging[Vector/Loki/Logging Console plugin] has replaced the traditional Elasticsearch/Fluentd/Kibana stack to provide greater insights and better observability
+| Provides a per-VM advanced option to Enable logging to a log file called vmware-n.log
+
+| Log Shipping
+| Vector https://docs.openshift.com/container-platform/latest/logging/log_collection_forwarding/log-forwarding.html#log-forwarding-implementations-multi-clf_log-forwarding[multi log forwarder] feature supports multiple Red Hat  and 3rd party logging applications
+| Host logs can be shipped from vCenter to alternate locations/3rd party logging apps
+|===
+
+Full list of Alertmanager receiver integrations:  https://prometheus.io/docs/alerting/latest/configuration/#receiver-integration-settings
+Full list of Log Forwarder Outputs: https://access.redhat.com/documentation/en-us/openshift_container_platform/4.15/html/logging/log-collection-and-forwarding#supported-log-outputs_logging-output-types
+

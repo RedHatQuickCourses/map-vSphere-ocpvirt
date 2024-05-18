@@ -1,0 +1,14 @@
+= Hosted Kubernetes Integration
+
+[cols="1,1,1"]
+|===
+|  | OpenShift Virtualization | VMware
+
+| Hosting pods on hypervisor nodes
+| Pods and VMs are native peers, there is no difference between them with OpenShift Virtualization
+| vSphere with Kubernetes allows “native” Pods to be deployed against the cluster, however they are still running using a VM shim
+
+| Efficient cluster provisioning
+| https://docs.openshift.com/container-platform/latest/hosted_control_planes/index.html[Hosted Control Planes] enable rapid creation of tenant OpenShift clusters with cloud provider integration using the KubeVirt provider.
+| Tanzu Kubernetes Grid abstracts provisioning Kubernetes clusters using Cluster API
+|===

@@ -1,3 +1,30 @@
-= Section 1
+= Summary
 
-This is _Section 1_ of _Chapter 2_ in the *hello* quick course....
+[cols="1,1,1"]
+|===
+|  | OpenShift Virtualization | VMware
+
+| Infrastructure Automation
+| https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10[RHACM], https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4[Ansible], and https://docs.openshift.com/gitops/latest/understanding_openshift_gitops/about-redhat-openshift-gitops.html#about-redhat-openshift-gitops[GitOps]
+| Aria Automation Config (SaltStack) and PowerShell
+
+| Application Automation
+| https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10[RHACM], https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4[Ansible], https://docs.openshift.com/pipelines/latest/about/understanding-openshift-pipelines.html[Pipelines], and https://docs.openshift.com/gitops/latest/understanding_openshift_gitops/about-redhat-openshift-gitops.html#about-redhat-openshift-gitops[GitOps]
+| Aria Automation Orchestrator (vRealize Orchestrator) and Aria Automation (vRealize Automation)
+
+| Networking
+| Multus / OVN-Kubernetes / https://access.redhat.com/articles/5436171[Third party CNI]
+| NSX
+
+| Storage
+| https://marketplace.redhat.com/en-us/products/red-hat-openshift-data-foundation[ODF], https://docs.openshift.com/container-platform/latest/scalability_and_performance/optimization/optimizing-storage.html[Optimizing Storage] and https://kubernetes-csi.github.io/docs/drivers.html[partner ecosystem for CSI]
+| vSAN
+
+| Observability
+| https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10[RHACM], OpenShift https://docs.openshift.com/container-platform/latest/logging/cluster-logging-deploying.html[Logging] & https://docs.openshift.com/container-platform/latest/monitoring/managing-metrics.html[Metrics], https://docs.openshift.com/container-platform/latest/service_mesh/v1x/installing-ossm.html[Service Mesh], https://docs.openshift.com/container-platform/latest/observability/distr_tracing/distr_tracing_arch/distr-tracing-architecture.html[Distributed Tracing]
+| Wavefront
+
+| Data Protection
+| https://docs.openshift.com/container-platform/latest/backup_and_restore/application_backup_and_restore/oadp-intro.html[OpenShift API for Data Protection (OADP)], https://marketplace.redhat.com/en-us/search?q=%22backup%22[Partner ecosystem]
+| vSphere Replication, partner ecosystem
+|===

@@ -1,0 +1,34 @@
+= Data Protection and Disaster Recovery
+
+[cols="1,1,1"]
+|===
+|  | OpenShift Virtualization | VMware
+
+| Backup / restore
+| https://docs.openshift.com/container-platform/latest/backup_and_restore/index.html#application-backup-restore-operations-overview[OpenShift API for Data Protection (OADP)]
+EX: https://docs.kasten.io/latest/install/openshift/operator.html[Kasten K10 by Veeam] supports VMs. Additionally working with Dell, IBM, Veritas, Trilio, Storware to support.
+
+- https://docs.kasten.io/latest/usage/openshift_virtualization.html[Kasten K10 by VEEAM]
+
+- https://docs.trilio.io/kubernetes/appendix/backup-and-restore-virtual-machine-running-on-openshift-virtualization[Trilio for Kubernetes]
+
+- https://storware.eu/solutions/virtual-machine-backup-and-recovery/openshift-virtualization-and-kubevirt/[Storware Backup and Recovery]
+
+- https://portworx.com/blog/live-migration-backup-and-restore-for-openshift-virtualization/[Portworx PX-Backup] and https://portworx.com/blog/disaster-recovery-for-red-hat-openshift-virtualization/[Metro-DR]
+Search for additional venders here
+https://marketplace.redhat.com/en-us
+| Strong ecosystem of backup partners.
+
+| https://access.redhat.com/documentation/en-us/red_hat_openshift_data_foundation/4.15/html/configuring_openshift_data_foundation_disaster_recovery_for_openshift_workloads/rdr-solution[Disaster Recovery - Regional (async)]
+| GitOps, Infrastructure-as-Code,
+RHACM + ODF,
+Future - other storage providers
+| Site Recovery Manager (SRM)
+vSphere Replication
+
+| https://access.redhat.com/documentation/en-us/red_hat_openshift_data_foundation/4.15/html/configuring_openshift_data_foundation_disaster_recovery_for_openshift_workloads/metro-dr-solution[Disaster Recovery - Metro (sync)]
+| RHACM + ODF - Tech Preview OCP 4.15,
+Future - other storage providers
+| Stretched clusters
+Fault Tolerance
+|===

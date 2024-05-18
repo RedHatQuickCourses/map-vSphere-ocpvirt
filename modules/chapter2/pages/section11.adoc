@@ -1,0 +1,14 @@
+= Access Control
+
+[cols="1,1,1"]
+|===
+|  | OpenShift Virtualization | VMware
+
+| Resource Scoping
+| Top-level organization starts at the cluster level. Organizing VMs in folders can be represented by https://docs.openshift.com/container-platform/latest/applications/projects/working-with-projects.html[namespaces]. Resources such as network, storage, VM templates are stored within namespaces and can be isolated via https://docs.openshift.com/container-platform/latest/networking/network_policy/about-network-policy.html[network policies].
+| Scoped access to resources: datacenters, clusters, folders, networks, storage, templates, content.
+
+| Action Permissions
+| Provides https://docs.openshift.com/container-platform/latest/virt/about_virt/virt-security-policies.html#authorization_virt-security-policies[three default roles]: cluster admin, admin by namespace, and view. https://docs.openshift.com/container-platform/latest/authentication/using-rbac.html[Custom RBAC] can be mimic any existing roles or permissions down to the Kubernetes object level.
+| Roles and Permissions structure for different user/group archetypes.
+|===

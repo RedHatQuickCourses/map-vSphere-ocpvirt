@@ -1,0 +1,18 @@
+= VM Administration
+
+[cols="1,1,1"]
+|===
+|  | OpenShift Virtualization | VMware
+
+| Template Management
+| Can use OVAs and VM (template) Library with performance tuned VM templates. https://docs.openshift.com/container-platform/latest/virt/virtual_machines/creating_vms_rh/virt-creating-vms-from-templates.html#virt-creating-vm-from-template_virt-creating-vms-from-templates[Two-click VM creation wizard flow]
+| Template VMs, OVA/OVF deployment, and content libraries offer the ability to provision VMs using a simplified process
+
+| VM lifecycle management
+| Utilize https://docs.openshift.com/container-platform/latest/virt/virtual_machines/creating_vms_custom/virt-creating-vms-uploading-images.html#virt-creating-windows-vm_virt-creating-vms-uploading-images[sysprep] and https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_cloud-init_for_rhel_9/configuring-cloud-init_cloud-content[cloud-init]
+| Guest OS customization is an abstraction for sysprep/cloud-init
+
+| VM Export/Import
+| Import OVA using https://access.redhat.com/documentation/en-us/migration_toolkit_for_virtualization/2.5/html/installing_and_using_the_migration_toolkit_for_virtualization/prerequisites[Migration Toolkit for Virtualization]
+| Import and export VMs using the OVF and OVA formats
+|===

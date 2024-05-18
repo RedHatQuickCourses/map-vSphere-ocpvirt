@@ -1,0 +1,22 @@
+= Resource Management and Optimization
+
+[cols="1,1,1"]
+|===
+|  | OpenShift Virtualization | VMware
+
+| Compute live migration
+| Yes, https://docs.openshift.com/container-platform/latest/virt/live_migration/virt-about-live-migration.html[_Live Migration_]
+| Yes, _vMotion_
+
+| Adaptive resource scheduling / resource rebalancing
+| https://docs.openshift.com/container-platform/latest/virt/virtual_machines/advanced_vm_management/virt-enabling-descheduler-evictions.html[Descheduler] and eviction policies, (anti)affinity rules for VMs, Pods, and hosts
+| Dynamic Resource Scheduling (DRS), (anti)affinity rules for VMs to VMs and VMs to hosts
+
+| Memory overcommitment
+| KSM and free page reporting supported 4.15, host swap is a roadmap feature
+| Ballooning and Transparent Page Sharing (TPS)
+
+| CPU overcommitment
+| Yes
+| Yes
+|===

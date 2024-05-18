@@ -1,0 +1,14 @@
+= High Availability
+
+[cols="1,1,1"]
+|===
+|  | OpenShift Virtualization | VMware
+
+| Infrastructure HA Node Failure
+| Supported through https://docs.openshift.com/container-platform/latest/virt/install/preparing-cluster-for-virt.html#cluster-high-availability-options_preparing-cluster-for-virt[fencing agents] for IPI and non-IPI environments. See https://access.redhat.com/articles/7057929[KCS] for HA configuration.
+| Node failure detection and VM rescheduling happens within 15-30 seconds, even without vCenter
+
+| Application level HA
+| RHEL HA (https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/assembly_getting-started-with-pacemaker-configuring-and-managing-high-availability-clusters[pacemaker]) and Windows Server Failover Clustering (WSFC) are supported.
+| RHEL HA (https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/assembly_getting-started-with-pacemaker-configuring-and-managing-high-availability-clusters[pacemaker]) and Windows Server Failover Clustering (WSFC) are supported.
+|===
