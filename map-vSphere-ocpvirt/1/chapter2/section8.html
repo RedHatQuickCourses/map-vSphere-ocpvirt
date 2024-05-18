@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Alternate View: How do I connect VMs and containers/k8s? :: Map vSphere features to OpenShift Virtualization</title>
-    <link rel="prev" href="section3.html">
-    <link rel="next" href="../chapter2/index.html">
+    <title>High Availability :: Map vSphere features to OpenShift Virtualization</title>
+    <link rel="prev" href="section7.html">
+    <link rel="next" href="section9.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -47,19 +47,19 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="index.html">Workflow mapping of Red Hat OpenShift Virtualization to vSphere</a>
+    <a class="nav-link" href="../chapter1/index.html">Workflow mapping of Red Hat OpenShift Virtualization to vSphere</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section1.html">Terminology Comparison</a>
+    <a class="nav-link" href="../chapter1/section1.html">Terminology Comparison</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section2.html">How to Manage Virtual Machines?</a>
+    <a class="nav-link" href="../chapter1/section2.html">How to Manage Virtual Machines?</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="section3.html">How do I manage the virtualization environment?</a>
+    <a class="nav-link" href="../chapter1/section3.html">How do I manage the virtualization environment?</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="2">
-    <a class="nav-link" href="section4.html">Alternate View: How do I connect VMs and containers/k8s?</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../chapter1/section4.html">Alternate View: How do I connect VMs and containers/k8s?</a>
   </li>
 </ul>
   </li>
@@ -69,43 +69,43 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../chapter2/index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a>
+    <a class="nav-link" href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section1.html">Summary</a>
+    <a class="nav-link" href="section1.html">Summary</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section2.html">Automation</a>
+    <a class="nav-link" href="section2.html">Automation</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section3.html">Storage - the bigger story</a>
+    <a class="nav-link" href="section3.html">Storage - the bigger story</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section4.html">Data Protection and Disaster Recovery</a>
+    <a class="nav-link" href="section4.html">Data Protection and Disaster Recovery</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section5.html">Networking</a>
+    <a class="nav-link" href="section5.html">Networking</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section6.html">VM Administration</a>
+    <a class="nav-link" href="section6.html">VM Administration</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section7.html">VM Optimization</a>
+    <a class="nav-link" href="section7.html">VM Optimization</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="section8.html">High Availability</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section8.html">High Availability</a>
+    <a class="nav-link" href="section9.html">Resource Management and Optimization</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section9.html">Resource Management and Optimization</a>
+    <a class="nav-link" href="section10.html">Hosted Kubernetes Integration</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section10.html">Hosted Kubernetes Integration</a>
+    <a class="nav-link" href="section11.html">Access Control</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section11.html">Access Control</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../chapter2/section12.html">Monitoring, Alerts/Events, Logs</a>
+    <a class="nav-link" href="section12.html">Monitoring, Alerts/Events, Logs</a>
   </li>
 </ul>
   </li>
@@ -140,8 +140,8 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Map vSphere features to OpenShift Virtualization</a></li>
-    <li><a href="index.html">Workflow mapping of Red Hat OpenShift Virtualization to vSphere</a></li>
-    <li><a href="section4.html">Alternate View: How do I connect VMs and containers/k8s?</a></li>
+    <li><a href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a></li>
+    <li><a href="section8.html">High Availability</a></li>
   </ul>
 </nav>
 </div>
@@ -150,49 +150,36 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Alternate View: How do I connect VMs and containers/k8s?</h1>
-<div class="sect1">
-<h2 id="_vmware"><a class="anchor" href="#_vmware"></a>VMware</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>Kubernetes is deployed in VMs to the vSphere environment</p>
-</li>
-<li>
-<p>When using standard networking, e.g. (D)vSwitches, for VM connectivity, Pod-to-VM traffic traverses the k8s ingress/egress stack</p>
-</li>
-<li>
-<p>When using NSX-T as the SDN, VMs and containers can be connected to the same logical network</p>
-</li>
-<li>
-<p>Additional functionality, e.g. microsegmentation, for Pods relies on NSX-T</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_openshift_virtualization"><a class="anchor" href="#_openshift_virtualization"></a>OpenShift Virtualization</h2>
-<div class="sectionbody">
-<div class="ulist">
-<ul>
-<li>
-<p>OpenShift Virtualization uses the same SDN for both Pods and VMs, they are native peers.</p>
-</li>
-<li>
-<p>VMs access the same SDN features as Pods, including network policies, Service Mesh, Service and Route abstractions, etc.</p>
-</li>
-<li>
-<p>VMs can also connect directly to external L2 network, e.g. VLAN, or other networks defined using Multus</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
+<h1 class="page">High Availability</h1>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">OpenShift Virtualization</th>
+<th class="tableblock halign-left valign-top">VMware</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Infrastructure HA Node Failure</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Supported through <a href="https://docs.openshift.com/container-platform/latest/virt/install/preparing-cluster-for-virt.html#cluster-high-availability-options_preparing-cluster-for-virt">fencing agents</a> for IPI and non-IPI environments. See <a href="https://access.redhat.com/articles/7057929">KCS</a> for HA configuration.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Node failure detection and VM rescheduling happens within 15-30 seconds, even without vCenter</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application level HA</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RHEL HA (<a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/assembly_getting-started-with-pacemaker-configuring-and-managing-high-availability-clusters">pacemaker</a>) and Windows Server Failover Clustering (WSFC) are supported.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RHEL HA (<a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_high_availability_clusters/assembly_getting-started-with-pacemaker-configuring-and-managing-high-availability-clusters">pacemaker</a>) and Windows Server Failover Clustering (WSFC) are supported.</p></td>
+</tr>
+</tbody>
+</table>
 <nav class="pagination">
-  <span class="prev"><a href="section3.html">How do I manage the virtualization environment?</a></span>
-  <span class="next"><a href="../chapter2/index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a></span>
+  <span class="prev"><a href="section7.html">VM Optimization</a></span>
+  <span class="next"><a href="section9.html">Resource Management and Optimization</a></span>
 </nav>
 </article>
   </div>

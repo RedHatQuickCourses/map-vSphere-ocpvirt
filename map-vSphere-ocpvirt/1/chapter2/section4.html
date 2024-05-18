@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Summary :: Map vSphere features to OpenShift Virtualization</title>
-    <link rel="prev" href="index.html">
-    <link rel="next" href="section2.html">
+    <title>Data Protection and Disaster Recovery :: Map vSphere features to OpenShift Virtualization</title>
+    <link rel="prev" href="section3.html">
+    <link rel="next" href="section5.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -71,7 +71,7 @@
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="section1.html">Summary</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -80,7 +80,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="section3.html">Storage - the bigger story</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="section4.html">Data Protection and Disaster Recovery</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -141,7 +141,7 @@
   <ul>
     <li><a href="../index.html">Map vSphere features to OpenShift Virtualization</a></li>
     <li><a href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a></li>
-    <li><a href="section1.html">Summary</a></li>
+    <li><a href="section4.html">Data Protection and Disaster Recovery</a></li>
   </ul>
 </nav>
 </div>
@@ -150,7 +150,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Summary</h1>
+<h1 class="page">Data Protection and Disaster Recovery</h1>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -166,40 +166,37 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Infrastructure Automation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10">RHACM</a>, <a href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4">Ansible</a>, and <a href="https://docs.openshift.com/gitops/latest/understanding_openshift_gitops/about-redhat-openshift-gitops.html#about-redhat-openshift-gitops">GitOps</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aria Automation Config (SaltStack) and PowerShell</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backup / restore</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.openshift.com/container-platform/latest/backup_and_restore/index.html#application-backup-restore-operations-overview">OpenShift API for Data Protection (OADP)</a>
+EX: <a href="https://docs.kasten.io/latest/install/openshift/operator.html">Kasten K10 by Veeam</a> supports VMs. Additionally working with Dell, IBM, Veritas, Trilio, Storware to support.</p>
+<p class="tableblock">- <a href="https://docs.kasten.io/latest/usage/openshift_virtualization.html">Kasten K10 by VEEAM</a></p>
+<p class="tableblock">- <a href="https://docs.trilio.io/kubernetes/appendix/backup-and-restore-virtual-machine-running-on-openshift-virtualization">Trilio for Kubernetes</a></p>
+<p class="tableblock">- <a href="https://storware.eu/solutions/virtual-machine-backup-and-recovery/openshift-virtualization-and-kubevirt/">Storware Backup and Recovery</a></p>
+<p class="tableblock">- <a href="https://portworx.com/blog/live-migration-backup-and-restore-for-openshift-virtualization/">Portworx PX-Backup</a> and <a href="https://portworx.com/blog/disaster-recovery-for-red-hat-openshift-virtualization/">Metro-DR</a>
+Search for additional venders here
+<a href="https://marketplace.redhat.com/en-us" class="bare">https://marketplace.redhat.com/en-us</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Strong ecosystem of backup partners.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Application Automation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10">RHACM</a>, <a href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4">Ansible</a>, <a href="https://docs.openshift.com/pipelines/latest/about/understanding-openshift-pipelines.html">Pipelines</a>, and <a href="https://docs.openshift.com/gitops/latest/understanding_openshift_gitops/about-redhat-openshift-gitops.html#about-redhat-openshift-gitops">GitOps</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aria Automation Orchestrator (vRealize Orchestrator) and Aria Automation (vRealize Automation)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_data_foundation/4.15/html/configuring_openshift_data_foundation_disaster_recovery_for_openshift_workloads/rdr-solution">Disaster Recovery - Regional (async)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">GitOps, Infrastructure-as-Code,
+RHACM + ODF,
+Future - other storage providers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Site Recovery Manager (SRM)
+vSphere Replication</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Networking</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Multus / OVN-Kubernetes / <a href="https://access.redhat.com/articles/5436171">Third party CNI</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NSX</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://marketplace.redhat.com/en-us/products/red-hat-openshift-data-foundation">ODF</a>, <a href="https://docs.openshift.com/container-platform/latest/scalability_and_performance/optimization/optimizing-storage.html">Optimizing Storage</a> and <a href="https://kubernetes-csi.github.io/docs/drivers.html">partner ecosystem for CSI</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">vSAN</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Observability</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10">RHACM</a>, OpenShift <a href="https://docs.openshift.com/container-platform/latest/logging/cluster-logging-deploying.html">Logging</a> &amp; <a href="https://docs.openshift.com/container-platform/latest/monitoring/managing-metrics.html">Metrics</a>, <a href="https://docs.openshift.com/container-platform/latest/service_mesh/v1x/installing-ossm.html">Service Mesh</a>, <a href="https://docs.openshift.com/container-platform/latest/observability/distr_tracing/distr_tracing_arch/distr-tracing-architecture.html">Distributed Tracing</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Wavefront</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data Protection</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.openshift.com/container-platform/latest/backup_and_restore/application_backup_and_restore/oadp-intro.html">OpenShift API for Data Protection (OADP)</a>, <a href="https://marketplace.redhat.com/en-us/search?q=%22backup%22">Partner ecosystem</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">vSphere Replication, partner ecosystem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_openshift_data_foundation/4.15/html/configuring_openshift_data_foundation_disaster_recovery_for_openshift_workloads/metro-dr-solution">Disaster Recovery - Metro (sync)</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">RHACM + ODF - Tech Preview OCP 4.15,
+Future - other storage providers</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Stretched clusters
+Fault Tolerance</p></td>
 </tr>
 </tbody>
 </table>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a></span>
-  <span class="next"><a href="section2.html">Automation</a></span>
+  <span class="prev"><a href="section3.html">Storage - the bigger story</a></span>
+  <span class="next"><a href="section5.html">Networking</a></span>
 </nav>
 </article>
   </div>

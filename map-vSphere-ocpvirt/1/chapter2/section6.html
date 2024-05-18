@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Summary :: Map vSphere features to OpenShift Virtualization</title>
-    <link rel="prev" href="index.html">
-    <link rel="next" href="section2.html">
+    <title>VM Administration :: Map vSphere features to OpenShift Virtualization</title>
+    <link rel="prev" href="section5.html">
+    <link rel="next" href="section7.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -71,7 +71,7 @@
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="section1.html">Summary</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -86,7 +86,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="section5.html">Networking</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="section6.html">VM Administration</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -141,7 +141,7 @@
   <ul>
     <li><a href="../index.html">Map vSphere features to OpenShift Virtualization</a></li>
     <li><a href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a></li>
-    <li><a href="section1.html">Summary</a></li>
+    <li><a href="section6.html">VM Administration</a></li>
   </ul>
 </nav>
 </div>
@@ -150,7 +150,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Summary</h1>
+<h1 class="page">VM Administration</h1>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -166,40 +166,25 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Infrastructure Automation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10">RHACM</a>, <a href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4">Ansible</a>, and <a href="https://docs.openshift.com/gitops/latest/understanding_openshift_gitops/about-redhat-openshift-gitops.html#about-redhat-openshift-gitops">GitOps</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aria Automation Config (SaltStack) and PowerShell</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Template Management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Can use OVAs and VM (template) Library with performance tuned VM templates. <a href="https://docs.openshift.com/container-platform/latest/virt/virtual_machines/creating_vms_rh/virt-creating-vms-from-templates.html#virt-creating-vm-from-template_virt-creating-vms-from-templates">Two-click VM creation wizard flow</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Template VMs, OVA/OVF deployment, and content libraries offer the ability to provision VMs using a simplified process</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Application Automation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10">RHACM</a>, <a href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4">Ansible</a>, <a href="https://docs.openshift.com/pipelines/latest/about/understanding-openshift-pipelines.html">Pipelines</a>, and <a href="https://docs.openshift.com/gitops/latest/understanding_openshift_gitops/about-redhat-openshift-gitops.html#about-redhat-openshift-gitops">GitOps</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aria Automation Orchestrator (vRealize Orchestrator) and Aria Automation (vRealize Automation)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VM lifecycle management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Utilize <a href="https://docs.openshift.com/container-platform/latest/virt/virtual_machines/creating_vms_custom/virt-creating-vms-uploading-images.html#virt-creating-windows-vm_virt-creating-vms-uploading-images">sysprep</a> and <a href="https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/9/html/configuring_and_managing_cloud-init_for_rhel_9/configuring-cloud-init_cloud-content">cloud-init</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Guest OS customization is an abstraction for sysprep/cloud-init</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Networking</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Multus / OVN-Kubernetes / <a href="https://access.redhat.com/articles/5436171">Third party CNI</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NSX</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://marketplace.redhat.com/en-us/products/red-hat-openshift-data-foundation">ODF</a>, <a href="https://docs.openshift.com/container-platform/latest/scalability_and_performance/optimization/optimizing-storage.html">Optimizing Storage</a> and <a href="https://kubernetes-csi.github.io/docs/drivers.html">partner ecosystem for CSI</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">vSAN</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Observability</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10">RHACM</a>, OpenShift <a href="https://docs.openshift.com/container-platform/latest/logging/cluster-logging-deploying.html">Logging</a> &amp; <a href="https://docs.openshift.com/container-platform/latest/monitoring/managing-metrics.html">Metrics</a>, <a href="https://docs.openshift.com/container-platform/latest/service_mesh/v1x/installing-ossm.html">Service Mesh</a>, <a href="https://docs.openshift.com/container-platform/latest/observability/distr_tracing/distr_tracing_arch/distr-tracing-architecture.html">Distributed Tracing</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Wavefront</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data Protection</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.openshift.com/container-platform/latest/backup_and_restore/application_backup_and_restore/oadp-intro.html">OpenShift API for Data Protection (OADP)</a>, <a href="https://marketplace.redhat.com/en-us/search?q=%22backup%22">Partner ecosystem</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">vSphere Replication, partner ecosystem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VM Export/Import</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Import OVA using <a href="https://access.redhat.com/documentation/en-us/migration_toolkit_for_virtualization/2.5/html/installing_and_using_the_migration_toolkit_for_virtualization/prerequisites">Migration Toolkit for Virtualization</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Import and export VMs using the OVF and OVA formats</p></td>
 </tr>
 </tbody>
 </table>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a></span>
-  <span class="next"><a href="section2.html">Automation</a></span>
+  <span class="prev"><a href="section5.html">Networking</a></span>
+  <span class="next"><a href="section7.html">VM Optimization</a></span>
 </nav>
 </article>
   </div>

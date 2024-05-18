@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Summary :: Map vSphere features to OpenShift Virtualization</title>
-    <link rel="prev" href="index.html">
-    <link rel="next" href="section2.html">
+    <title>Networking :: Map vSphere features to OpenShift Virtualization</title>
+    <link rel="prev" href="section4.html">
+    <link rel="next" href="section6.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -71,7 +71,7 @@
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="section1.html">Summary</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -83,7 +83,7 @@
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="section4.html">Data Protection and Disaster Recovery</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="section5.html">Networking</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -141,7 +141,7 @@
   <ul>
     <li><a href="../index.html">Map vSphere features to OpenShift Virtualization</a></li>
     <li><a href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a></li>
-    <li><a href="section1.html">Summary</a></li>
+    <li><a href="section5.html">Networking</a></li>
   </ul>
 </nav>
 </div>
@@ -150,7 +150,7 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Summary</h1>
+<h1 class="page">Networking</h1>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -166,40 +166,35 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Infrastructure Automation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10">RHACM</a>, <a href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4">Ansible</a>, and <a href="https://docs.openshift.com/gitops/latest/understanding_openshift_gitops/about-redhat-openshift-gitops.html#about-redhat-openshift-gitops">GitOps</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aria Automation Config (SaltStack) and PowerShell</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Host network configuration and management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Kubernetes-native configuration management using the <a href="https://docs.openshift.com/container-platform/latest/networking/k8s_nmstate/k8s-nmstate-about-the-k8s-nmstate-operator.html">NMstate Operator</a> and <a href="https://docs.openshift.com/container-platform/latest/networking/multiple_networks/understanding-multiple-networks.html">Multus</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Per-host configuration via vSwitch or single point management via Distributed Virtual Switch (DvSwitch)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Application Automation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10">RHACM</a>, <a href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4">Ansible</a>, <a href="https://docs.openshift.com/pipelines/latest/about/understanding-openshift-pipelines.html">Pipelines</a>, and <a href="https://docs.openshift.com/gitops/latest/understanding_openshift_gitops/about-redhat-openshift-gitops.html#about-redhat-openshift-gitops">GitOps</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aria Automation Orchestrator (vRealize Orchestrator) and Aria Automation (vRealize Automation)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Software-defined networking: protect/limit/control VM-to-VM communication</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Network policies using any SDN provide {Pod</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VM}-to-{Pod</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Networking</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Multus / OVN-Kubernetes / <a href="https://access.redhat.com/articles/5436171">Third party CNI</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NSX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VM} traffic control. Multiple distinct SDNs are possible using the partner ecosystem, e.g. <a href="https://catalog.redhat.com/software/container-stacks/detail/5e98747f6c5dcb34dfbb1a0f">the Tigera Calico Operator</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Multiple capabilities here, e.g. QinQ, but this is most often referring to NSX’s microsegmentation, a.k.a. distributed firewall</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disaster Recovery - Metro (sync)</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://marketplace.redhat.com/en-us/products/red-hat-openshift-data-foundation">ODF</a>, <a href="https://docs.openshift.com/container-platform/latest/scalability_and_performance/optimization/optimizing-storage.html">Optimizing Storage</a> and <a href="https://kubernetes-csi.github.io/docs/drivers.html">partner ecosystem for CSI</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">vSAN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VMs are connected to one or more L2 (VLAN) networks using Multus and/or connected to the <a href="https://docs.openshift.com/container-platform/latest/networking/ovn_kubernetes_network_provider/about-ovn-kubernetes.html">cluster SDN</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VMs are connected to one or more L2 (VLAN) networks using (D)vSwitches and/or NSX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pod-to-VM and VM-to-Pod connectivity</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Observability</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10">RHACM</a>, OpenShift <a href="https://docs.openshift.com/container-platform/latest/logging/cluster-logging-deploying.html">Logging</a> &amp; <a href="https://docs.openshift.com/container-platform/latest/monitoring/managing-metrics.html">Metrics</a>, <a href="https://docs.openshift.com/container-platform/latest/service_mesh/v1x/installing-ossm.html">Service Mesh</a>, <a href="https://docs.openshift.com/container-platform/latest/observability/distr_tracing/distr_tracing_arch/distr-tracing-architecture.html">Distributed Tracing</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Wavefront</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data Protection</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.openshift.com/container-platform/latest/backup_and_restore/application_backup_and_restore/oadp-intro.html">OpenShift API for Data Protection (OADP)</a>, <a href="https://marketplace.redhat.com/en-us/search?q=%22backup%22">Partner ecosystem</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">vSphere Replication, partner ecosystem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">VMs and Pods are native peers <a href="https://docs.openshift.com/container-platform/latest/networking/about-networking.html">when connected to the SDN</a>, with all of the features and capabilities equally available to both</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Traffic between Pods and VMs must traverse through the Kubernetes ingress or similar mechanism, e.g. NodePort</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Application observability</p></td>
 </tr>
 </tbody>
 </table>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a></span>
-  <span class="next"><a href="section2.html">Automation</a></span>
+  <span class="prev"><a href="section4.html">Data Protection and Disaster Recovery</a></span>
+  <span class="next"><a href="section6.html">VM Administration</a></span>
 </nav>
 </article>
   </div>

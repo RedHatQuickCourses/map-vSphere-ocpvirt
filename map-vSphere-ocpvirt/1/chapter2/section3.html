@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Summary :: Map vSphere features to OpenShift Virtualization</title>
-    <link rel="prev" href="index.html">
-    <link rel="next" href="section2.html">
+    <title>Storage - the bigger story :: Map vSphere features to OpenShift Virtualization</title>
+    <link rel="prev" href="section2.html">
+    <link rel="next" href="section4.html">
     <meta name="generator" content="Antora 3.1.3">
     <link rel="stylesheet" href="../../../_/css/site.css">
     <script>var uiRootPath = '../../../_'</script>
@@ -71,13 +71,13 @@
     <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="2">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="section1.html">Summary</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="section2.html">Automation</a>
   </li>
-  <li class="nav-item" data-depth="2">
+  <li class="nav-item is-current-page" data-depth="2">
     <a class="nav-link" href="section3.html">Storage - the bigger story</a>
   </li>
   <li class="nav-item" data-depth="2">
@@ -141,7 +141,7 @@
   <ul>
     <li><a href="../index.html">Map vSphere features to OpenShift Virtualization</a></li>
     <li><a href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a></li>
-    <li><a href="section1.html">Summary</a></li>
+    <li><a href="section3.html">Storage - the bigger story</a></li>
   </ul>
 </nav>
 </div>
@@ -150,7 +150,51 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Summary</h1>
+<h1 class="page">Storage - the bigger story</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>OpenShift Virtualization uses Kubernetes CSI abstractions for VM storage</p>
+<div class="ulist">
+<ul>
+<li>
+<p>In vSphere, static pools of capacity are given to the hypervisor (datastore), each VM disk is one or more file(s).
+Each datastore holds many VM disks.
+The virtualization admin is responsible for storage capacity management.</p>
+</li>
+<li>
+<p>OpenShift / k8s uses dynamic PV/PVC provisioning of a CSI compliant storage provider.
+Each PV holds one VM disk.
+The storage admin is responsible for storage capacity management</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Local storage - maximize host resource utilization via HostPathProvisioner, LocalStorageOperator, TopoLVM to provide PVs to VMs, Pods, or hosted storage solutions</p>
+</li>
+<li>
+<p>Both vSphere and OpenShift have converged hypervisor and storage offerings</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Use OpenShift Data Foundation, or a partner offering with a CSI provider, e.g. Portworx, to host VMs in a converged storage + OpenShift deployment</p>
+</li>
+<li>
+<p>VMware has VSAN and multiple ecosystem partners offering hyperconverged features, e.g. Nutanix</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_storage_core_featurecapability_matrix"><a class="anchor" href="#_storage_core_featurecapability_matrix"></a>Storage - Core feature/capability matrix</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 33.3333%;">
@@ -166,40 +210,71 @@
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Infrastructure Automation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10">RHACM</a>, <a href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4">Ansible</a>, and <a href="https://docs.openshift.com/gitops/latest/understanding_openshift_gitops/about-redhat-openshift-gitops.html#about-redhat-openshift-gitops">GitOps</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aria Automation Config (SaltStack) and PowerShell</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Accessing legacy storage arrays</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://kubernetes-csi.github.io/docs/drivers.html">All major storage vendors have a CSI compliant driver</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Compatible with all major storage vendors</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Application Automation</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10">RHACM</a>, <a href="https://access.redhat.com/documentation/en-us/red_hat_ansible_automation_platform/2.4">Ansible</a>, <a href="https://docs.openshift.com/pipelines/latest/about/understanding-openshift-pipelines.html">Pipelines</a>, and <a href="https://docs.openshift.com/gitops/latest/understanding_openshift_gitops/about-redhat-openshift-gitops.html#about-redhat-openshift-gitops">GitOps</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Aria Automation Orchestrator (vRealize Orchestrator) and Aria Automation (vRealize Automation)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Storage accelerated cloning</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes, depending on CSI driver</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes, via VAAI</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Networking</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Multus / OVN-Kubernetes / <a href="https://access.redhat.com/articles/5436171">Third party CNI</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NSX</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disk resizing</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Storage</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://marketplace.redhat.com/en-us/products/red-hat-openshift-data-foundation">ODF</a>, <a href="https://docs.openshift.com/container-platform/latest/scalability_and_performance/optimization/optimizing-storage.html">Optimizing Storage</a> and <a href="https://kubernetes-csi.github.io/docs/drivers.html">partner ecosystem for CSI</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">vSAN</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Policy based storage management</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Implicit to the platform (StorageClasses)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vVols, SPBM</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Observability</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://access.redhat.com/documentation/en-us/red_hat_advanced_cluster_management_for_kubernetes/2.10">RHACM</a>, OpenShift <a href="https://docs.openshift.com/container-platform/latest/logging/cluster-logging-deploying.html">Logging</a> &amp; <a href="https://docs.openshift.com/container-platform/latest/monitoring/managing-metrics.html">Metrics</a>, <a href="https://docs.openshift.com/container-platform/latest/service_mesh/v1x/installing-ossm.html">Service Mesh</a>, <a href="https://docs.openshift.com/container-platform/latest/observability/distr_tracing/distr_tracing_arch/distr-tracing-architecture.html">Distributed Tracing</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Wavefront</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disk / VM snapshots</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Yes</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data Protection</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.openshift.com/container-platform/latest/backup_and_restore/application_backup_and_restore/oadp-intro.html">OpenShift API for Data Protection (OADP)</a>, <a href="https://marketplace.redhat.com/en-us/search?q=%22backup%22">Partner ecosystem</a></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">vSphere Replication, partner ecosystem</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Non-disruptive storage migration</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">*[Check section below]</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Storage vMotion</p></td>
 </tr>
 </tbody>
 </table>
+<div class="paragraph">
+<p>*Non-disruptive storage migration</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>OpenShift Virtualization does not use datastores, where one storage device (LUN, NFS export, etc.) holds many VM disks. This means that the use case where the storage device is running out of GiB or IOPS and needs to have capacity “freed” does not apply with OpenShift Virtualization.</p>
+</li>
+<li>
+<p>Different use cases.</p>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Regular storage provisioning</strong> / capacity expansion for a VM - k8s separates VM/Pod storage consumption (i.e. the PVC) from the storage provisioning via StorageClass + CSI. Capacity management is handled through the CSI storage provide, so Storage migration in not needed.</p>
+</li>
+<li>
+<p><strong> Changing k8s storage class</strong> (initially deploy VMs on wrong storage class), etc. - cold migration using Migration Toolkit for Containers (MTC).</p>
+</li>
+<li>
+<p><strong>Storage array life cycle</strong> - migrating to newer version of same storage vendor - use storage vendor provided tooling to non-disruptively migrate from the old array to the new one.</p>
+</li>
+<li>
+<p><strong>Storage array life cycle</strong> - Migrating from one storage vendor to different vendor - VM cold migration using Migration Toolkit for Containers.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">Capability mapping of Red Hat OpenShift Virtualization to vSphere</a></span>
-  <span class="next"><a href="section2.html">Automation</a></span>
+  <span class="prev"><a href="section2.html">Automation</a></span>
+  <span class="next"><a href="section4.html">Data Protection and Disaster Recovery</a></span>
 </nav>
 </article>
   </div>
