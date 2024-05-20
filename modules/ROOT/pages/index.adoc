@@ -1,7 +1,7 @@
 = Map vSphere features to OpenShift Virtualization
 :navtitle: Home
 
-Welcome to this quick course on the _Map vSphere features to OpenShift Virtualization_.
+Welcome to this quick course, _Map vSphere features to OpenShift Virtualization_.
 This quick course is a part of a series of courses about Migrate Applications and VM workloads from VMware to OpenShift Virtualization.
 
 == Authors

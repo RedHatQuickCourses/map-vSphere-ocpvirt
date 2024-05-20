@@ -22,5 +22,7 @@
 |===
 
 Full list of Alertmanager receiver integrations:  https://prometheus.io/docs/alerting/latest/configuration/#receiver-integration-settings
+
+
 Full list of Log Forwarder Outputs: https://access.redhat.com/documentation/en-us/openshift_container_platform/4.15/html/logging/log-collection-and-forwarding#supported-log-outputs_logging-output-types
 

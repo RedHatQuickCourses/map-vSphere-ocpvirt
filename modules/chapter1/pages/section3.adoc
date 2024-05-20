@@ -1,4 +1,4 @@
-= How do I manage the virtualization environment?
+= How to manage the virtualization environment?
 
 == VMware
 * Install ESXi to hypervisor nodes and configure basic network connectivity, then use vCenter to join the nodes and configure additional properties

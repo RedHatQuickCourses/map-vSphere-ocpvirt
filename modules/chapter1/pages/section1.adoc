@@ -36,3 +36,6 @@
 | https://docs.openshift.com/container-platform/latest/monitoring/managing-metrics.html[OpenShift Metrics] and https://docs.openshift.com/container-platform/latest/monitoring/monitoring-overview.html[Monitoring]
 | vCenter, vRealize Operations
 |===
+
+[IMPORTANT]
+This is not a feature comparison list. This is a tool to help map features and capabilities from the old platform to the new. The goal is not to have a feature-by-feature comparison, rather to get past the basic “will this meet my needs” conversation so that the customer can move into a workshop, followed by a pilot.

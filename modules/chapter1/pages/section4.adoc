@@ -1,4 +1,4 @@
-= Alternate View: How do I connect VMs and containers/k8s?
+= Alternate View: How to connect VMs and containers/k8s?
 
 == VMware
 * Kubernetes is deployed in VMs to the vSphere environment
