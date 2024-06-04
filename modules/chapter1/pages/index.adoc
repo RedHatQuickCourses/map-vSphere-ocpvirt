@@ -1,10 +1,10 @@
-= Workflow mapping of Red Hat OpenShift Virtualization to vSphere
+= Workflow Mapping of Red Hat OpenShift Virtualization to vSphere
 
 This chapter covers the workflow mapping of Red Hat OpenShift Virtualization to vSphere.
 
 Chapter goals:
 
-* Familiarize with terminology comparison between OpenShift Virtualization and vSphere
-* Familiarize with the virtual machine management in OpenShift Virtualization and vSphere
-* Familiarize with the virtualization environment management in OpenShift Virtualization and vSphere
-* Familiarize with connecting VMs and containers/k8s in OpenShift Virtualization and vSphere
+* Learn about terminology comparison between OpenShift Virtualization and vSphere
+* Understand the virtual machine management in OpenShift Virtualization and vSphere
+* Explore the virtualization environment management in OpenShift Virtualization and vSphere
+* Study connecting VMs and containers/k8s in OpenShift Virtualization and vSphere
