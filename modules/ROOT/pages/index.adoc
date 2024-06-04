@@ -27,7 +27,3 @@ The overall objectives of this course include:
 
 * Identify features and capabilities of Red Hat OpenShift Virtualization that are equivalent to VMware vSphere one
 * Map the features and capabilities of VMware vSphere to OpenShift Virtualization
-
-== References
-
-* https://docs.google.com/presentation/d/1-JXkZ50nODr7pBTuD7qyaCdTCLUqSD5QZYABxQhmCqg/edit#slide=id.ga63efbaffa_0_1625[OpenShift Virtualization Capabilities and Workflow mapping to VMware]
