@@ -1,4 +1,4 @@
-= Storage - the bigger story
+= Storage - The Bigger Story
 
 * OpenShift Virtualization uses Kubernetes CSI abstractions for VM storage
 ** In vSphere, static pools of capacity are given to the hypervisor (datastore), each VM disk is one or more file(s).

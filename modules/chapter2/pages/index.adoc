@@ -1,4 +1,4 @@
-= Capability mapping of Red Hat OpenShift Virtualization to vSphere
+= Capability Mapping of Red Hat OpenShift Virtualization to vSphere
 
 This chapter covers the capability mapping of Red Hat OpenShift Virtualization to vSphere.
 

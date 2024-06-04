@@ -1,7 +1,8 @@
-= Map vSphere features to OpenShift Virtualization
-:navtitle: Home
+= Map vSphere Features to OpenShift Virtualization
+:navtitle: Home 
+// Title must be in Uppercase, hence changed the word - feature
 
-Welcome to this quick course, _Map vSphere features to OpenShift Virtualization_.
+Welcome to this quick course, _Map vSphere Features to OpenShift Virtualization_.
 This quick course is a part of a series of courses about Migrate Applications and VM workloads from VMware to OpenShift Virtualization.
 
 == Authors
@@ -19,6 +20,7 @@ For this course, you should have:
 
 * RHCSA or higher is helpful for the navigation and usage of the command line, but it is not required.
 * https://developers.redhat.com/learn/openshift/container-fundamentals[Container Fundamentals]
+// The above link does not directly link me to container fundamentals learning path. Is it with me or do we need to update the link?
 * https://developers.redhat.com/learn/openshift/foundations-openshift[Foundations of OpenShift]
 
 == Objectives
