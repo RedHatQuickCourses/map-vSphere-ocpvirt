@@ -2,8 +2,7 @@
 
 == VMware
 * vCenter provides GUI-based VM management for both devs/app teams and virtualization admins
-* Multiple ways to access vCenter API: Ansible/SaltStack/etc., PowerCLI, Python/Java/etc. SDKs
-// Can we rephrase this for better clarity - There are multiple ways to access vCenter API namely - Ansible, SaltStack, PowerCLI, and SDKs for Python, Java, etc.
+* There are multiple ways to access vCenter API namely - Ansible, SaltStack, PowerCLI, and SDKs for Python, Java, etc.
 
 == OpenShift Virtualization
 * The OpenShift console offers GUI-based access for creating and managing VMs
