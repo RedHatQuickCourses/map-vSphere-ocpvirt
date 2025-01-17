@@ -173,23 +173,23 @@
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Software-defined networking: protect/limit/control VM-to-VM communication</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Network policies using any SDN provide \\{Pod</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">VM}-to-{Pod</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">VM} traffic control. Multiple distinct SDNs are possible using the partner ecosystem, e.g. <a href="https://catalog.redhat.com/software/container-stacks/detail/5e98747f6c5dcb34dfbb1a0f">the Tigera Calico Operator</a>.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Network policies using any SDN provide {Pod|VM}-to-{Pod|VM} traffic control. Multiple distinct SDNs are possible using the partner ecosystem, e.g. <a href="https://catalog.redhat.com/software/container-stacks/detail/5e98747f6c5dcb34dfbb1a0f">the Tigera Calico Operator</a>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Multiple capabilities here, e.g. QinQ, but this is most often referring to NSX’s microsegmentation, a.k.a. distributed firewall</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Disaster Recovery - Metro (sync)</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Disaster Recovery - Metro (sync)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">VMs are connected to one or more L2 (VLAN) networks using Multus and/or connected to the <a href="https://docs.openshift.com/container-platform/latest/networking/ovn_kubernetes_network_provider/about-ovn-kubernetes.html">cluster SDN</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">VMs are connected to one or more L2 (VLAN) networks using (D)vSwitches and/or NSX</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pod-to-VM and VM-to-Pod connectivity</p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Pod-to-VM and VM-to-Pod connectivity</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">VMs and Pods are native peers <a href="https://docs.openshift.com/container-platform/latest/networking/about-networking.html">when connected to the SDN</a>, with all of the features and capabilities equally available to both</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Traffic between Pods and VMs must traverse through the Kubernetes ingress or similar mechanism, e.g. NodePort</p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Application observability</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.openshift.com/container-platform/latest/service_mesh/v2x/ossm-about.html">Service Mesh</a> provides robust abilities to ingest and analyze network flows and application level data to assist with debugging, performance troubleshooting, and more for both containerized and virtualized application components in the same cluster</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">vSwitch port mirroring to third party solutions and NSX traffic analysis for security purposes, no - or little - native visibility</p></td>
 </tr>
 </tbody>
 </table>
