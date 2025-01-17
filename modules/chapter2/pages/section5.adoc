@@ -9,7 +9,7 @@
 | Per-host configuration via vSwitch or single point management via Distributed Virtual Switch (DvSwitch)
 
 | Software-defined networking: protect/limit/control VM-to-VM communication
-| Network policies using any SDN provide \\{Pod|VM}-to-{Pod|VM} traffic control. Multiple distinct SDNs are possible using the partner ecosystem, e.g. https://catalog.redhat.com/software/container-stacks/detail/5e98747f6c5dcb34dfbb1a0f[the Tigera Calico Operator].
+| Network policies using any SDN provide {Pod\|VM}-to-{Pod\|VM} traffic control. Multiple distinct SDNs are possible using the partner ecosystem, e.g. https://catalog.redhat.com/software/container-stacks/detail/5e98747f6c5dcb34dfbb1a0f[the Tigera Calico Operator].
 | Multiple capabilities here, e.g. QinQ, but this is most often referring to NSX’s microsegmentation, a.k.a. distributed firewall
 
 | Disaster Recovery - Metro (sync)
